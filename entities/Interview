@@ -1,0 +1,54 @@
+{
+  "name": "Interview",
+  "type": "object",
+  "properties": {
+    "submission_id": {
+      "type": "string"
+    },
+    "candidate_name": {
+      "type": "string"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "job_title": {
+      "type": "string"
+    },
+    "round_number": {
+      "type": "number",
+      "default": 1
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "Phone",
+        "Video",
+        "Onsite"
+      ]
+    },
+    "interviewer_name": {
+      "type": "string"
+    },
+    "feedback_notes": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "Pass",
+        "Fail",
+        "On Hold",
+        "Pending"
+      ],
+      "default": "Pending"
+    }
+  },
+  "required": [
+    "submission_id",
+    "scheduled_date"
+  ]
+}

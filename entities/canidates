@@ -1,0 +1,86 @@
+{
+  "name": "Candidate",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full name of the candidate"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Skills tags"
+    },
+    "experience_years": {
+      "type": "number"
+    },
+    "work_authorization": {
+      "type": "string",
+      "enum": [
+        "US Citizen",
+        "Green Card",
+        "H1B",
+        "OPT",
+        "CPT",
+        "EAD",
+        "TN Visa",
+        "Other"
+      ]
+    },
+    "notice_period": {
+      "type": "string"
+    },
+    "expected_salary": {
+      "type": "number"
+    },
+    "current_title": {
+      "type": "string"
+    },
+    "current_company": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "resume_url": {
+      "type": "string",
+      "description": "Uploaded resume file URL"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Applied",
+        "Screened",
+        "Submitted",
+        "Interview",
+        "Offer",
+        "Hired",
+        "Closed"
+      ],
+      "default": "Applied"
+    },
+    "vendor_id": {
+      "type": "string",
+      "description": "Linked vendor ID"
+    }
+  },
+  "required": [
+    "full_name",
+    "email"
+  ]
+}

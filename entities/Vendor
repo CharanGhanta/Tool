@@ -1,0 +1,23 @@
+{
+  "name": "Vendor",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "commission_percentage": {
+      "type": "number",
+      "description": "Commission percentage"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
